@@ -4,7 +4,18 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [UNRELEASED]
+
+## 2.19.5
+### Changed
+ - Change tableView default to false for layout components.
+
+### Added
+ - Add tableView template for panel component.
+
+## 2.19.4
+### Fixed
+ - Issue with the iframe not setting the readonly flag properly on submissions.
 
 ## 2.19.3
 ### Fixed
