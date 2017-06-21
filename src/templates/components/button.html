@@ -11,3 +11,5 @@
   <span ng-if="component.rightIcon" class="{{ component.rightIcon }}" aria-hidden="true"></span>
    <i ng-if="component.action == 'submit' && formioForm.submitting" class="glyphicon glyphicon-refresh glyphicon-spin"></i>
 </button>
+<!-- Custom -->
+<save-status ng-if="component.event == 'saveProgress'"></save-status>
