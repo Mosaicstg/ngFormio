@@ -354,6 +354,9 @@ module.exports = function() {
       var template =
         '<div ng-if="!component.multiple">' +
           inputLabel +
+        '<div ng-if="!!component.description" class="help-block">' +
+        '<span>{{ component.description }}</span>' +
+        '</div>' +
           '<div class="input-group">' +
             '<div class="input-group-addon" ng-if="!!component.prefix">{{ component.prefix }}</div>' +
             input +
@@ -363,9 +366,6 @@ module.exports = function() {
           '<div class="formio-errors">' +
             '<formio-errors ng-if="::!builder"></formio-errors>' +
           '</div>' +
-        '</div>' +
-        '<div ng-if="!!component.description" class="help-block">' +
-          '<span>{{ component.description }}</span>' +
         '</div>' +
         '<div ng-if="component.multiple"><table class="table table-bordered">' +
           inputLabel +
