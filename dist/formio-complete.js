@@ -68274,7 +68274,7 @@ module.exports = function(app) {
         file: '=',
         form: '='
       },
-      template: '<a href="{{ file.url }}" ng-click="getFile($event)" target="_blank">{{ file.name }}</a>',
+      template: '<a href="{{ file.url }}" ng-click="getFile($event)" target="_blank">{{ file.original || file.name }}</a>',
       controller: [
         '$window',
         '$rootScope',
