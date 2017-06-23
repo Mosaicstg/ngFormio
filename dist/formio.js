@@ -1786,6 +1786,7 @@ var dropbox = function dropbox(formio) {
             response.storage = 'dropbox';
             response.size = file.size;
             response.type = file.type;
+            response.original = file.name;
             response.url = response.path_lower;
             resolve(response);
           } else {
@@ -1897,6 +1898,7 @@ var s3 = function s3(formio) {
                   url: response.url + response.data.key,
                   acl: response.data.acl,
                   size: file.size,
+                  original: file.name,
                   type: file.type
                 });
               } else {
@@ -1994,6 +1996,7 @@ var url = function url(formio) {
               name: fileName,
               url: xhr.responseURL + '/' + fileName,
               size: file.size,
+              original: file.name,
               type: file.type,
               data: respData
             });
@@ -10500,6 +10503,7 @@ module.exports = function(app) {
             var fileName = FormioUtils.uniqueName(file.name);
             $scope.fileUploads[fileName] = {
               name: fileName,
+              original: file.name,
               size: file.size,
               status: 'info',
               message: 'Starting upload'
