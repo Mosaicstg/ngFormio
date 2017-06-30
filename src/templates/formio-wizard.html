@@ -39,4 +39,5 @@
       <a class="btn btn-primary" ng-click="submit()">Submit Form</a>
     </li>
   </ul>
+  <div ng-repeat="alert in formioAlerts track by $index" class="alert alert-{{ alert.type }}" role="alert">{{ alert.message | formioTranslate:null:builder }}</div>
 </div>
