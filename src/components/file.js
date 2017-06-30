@@ -193,6 +193,7 @@ module.exports = function(app) {
             var fileName = FormioUtils.uniqueName(file.name);
             $scope.fileUploads[fileName] = {
               name: fileName,
+              original: file.name,
               size: file.size,
               status: 'info',
               message: 'Starting upload'
